@@ -38,33 +38,25 @@
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 					<button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				</div>
 
 				<div class="carousel-inner">
+
 					<div class="carousel-item active" data-bs-interval="5000">
-						<img src="/images/phantom/login1.png" class="d-block w-100" alt="...">
+
+						<img src="/images/login1.png" class="d-block w-100" alt="...">
+
 						<div class="carousel-caption d-none d-md-block">
-							<h5>카즈하&nbsp;&nbsp; / &nbsp;&nbsp;김채원&nbsp;&nbsp; / &nbsp;&nbsp;
-								김가람(탈퇴)&nbsp;&nbsp; / &nbsp;&nbsp;사쿠라&nbsp;&nbsp; / &nbsp;&nbsp;
-								허윤진&nbsp;&nbsp; / &nbsp;&nbsp;홍은채&nbsp;&nbsp;</h5>
-							<p>2022년 5월 2일 데뷔한 걸그룹 르세라핌</p>
+							<h5>YOUTUBE</h5>
+							<p>구독 좋아요!</p>
 						</div>
+
 					</div>
+
 					<div class="carousel-item" data-bs-interval="5000">
-						<img src="/images/phantom/login2.png" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>미야와키 사쿠라</h5>
-							<p>출생: 1998년 3월 19일 (24세) 가고시마현 가고시마시</p>
-						</div>
+						<img src="/images/login2.png" class="d-block w-100" alt="...">
 					</div>
-					<div class="carousel-item" data-bs-interval="5000">
-						<img src="/images/phantom/login3.png" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>김채원</h5>
-							<p>출생: 2000년 8월 1일 (22세) 서울특별시 강남구 개포동</p>
-						</div>
-					</div>
+
 				</div>
 
 				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -76,44 +68,60 @@
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 				</button>
+
 			</div>
 
 		</div>
     
 		<!--bodyContents-->
 		<div class="main" id="bodyContents">
-		 <div class="col-md-6 col-sm-12">
-			<div class="login-form">
-				  <div class="form-group">
-					 <input type="text" class="form-control" id="userId" name="userId" placeholder="아이디">
-				  </div>
-				  <div class="form-group">
-					 <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
-				  </div>
-				  <br>
-				  <div class="d-grid gap-2">
-					<button class="btn btn-dark" type="button">로그인</button>
-					<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">회원가입</a>
-				  </div>
-				  <label class="form-label">*아무나 들어올 수 없습니다.</label>
-				  <div class="form-check">
-					<label for="rememberId">
-					  <input class="form-check-input" type="checkbox" id="rememberId">
-					  아이디 저장
-					</label>
-					<a class="btn btn-link" role="button" onclick="">아이디 찾기</a>
-				  </div>
-				  <div class="form-group">
+	 		<div class="col-md-6 col-sm-12">
+				<div class="login-form">
+
+					<div class="form-group">
+				 		<input type="text" class="form-control" id="userId" name="userId" placeholder="이메일">
+					</div>
+
+					<div class="form-group">
+				 		<input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
+					</div>
+
+					<br>
+
+					<div class="d-grid gap-2">
+
+						<button class="btn btn-dark" type="button">로그인</button>
+
+						<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">회원가입</a>
+
+					</div>
+
+					<label class="form-label">*아무나 들어올 수 없습니다.</label>
+
+					<div class="form-check">
+
+						<label for="rememberId">
+							<input class="form-check-input" type="checkbox" id="rememberId">
+							아이디 저장
+						</label>
+
+						<!--
+						<a class="btn btn-link" role="button" onclick="">아이디 찾기</a>
+						-->
+
+					</div>
+
+					<!--
+					<div class="form-group">
 					<label for="keepLogin">
 					  <input class="form-check-input" type="checkbox" name="keepLogin" id="keepLogin">
 					  로그인 유지
 					</label>
 					<a class="btn btn-link" role="button" onclick="">비밀번호 찾기</a>
-				  </div>
-				<div>
+					</div>
+				  	-->
 				</div>
 			</div>
-		 </div>
 		</div>
 
         <!--Bootstrap-->

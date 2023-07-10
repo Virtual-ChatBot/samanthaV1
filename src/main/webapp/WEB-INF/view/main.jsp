@@ -51,10 +51,10 @@
 				<h2>환영합니다</h2>
 
 				<ul>
-					<li><a href="/user/login?userId=${user.userId}">Home</a></li>
-					<li><a href="/user/logout">Logout</a></li>
-					<li><a href="generic.html">Notice</a></li>
-					<li><a href="generic.html">Intro</a></li>
+					<li><a href="/user/login?userId=${user.userId}">메인으로</a></li>
+					<li><a href="/user/logout">로그아웃</a></li>
+					<li><a href="generic.html">블로그</a></li>
+					<li><a href="generic.html">소개</a></li>
 				</ul>
 			</nav>
 
@@ -68,8 +68,8 @@
 
 						<br>
 
-						<h2>${user.userName}님,</h2>
-						<p>여기는 <a href="https://www.youtube.com/@beemil" target="_blank">비밀상담소</a> 님이 AI 챗봇을 연구하는 곳입니다.</p>
+						<h2>${user.nickName}님,</h2>
+						<p>여기는 <a href="https://www.youtube.com/@beemil" target="_blank">비밀상담소</a> 가 AI 챗봇을 연구하는 곳입니다.</p>
 					</header>
 
 					<section class="tiles">
@@ -84,8 +84,8 @@
 								<h2>로그아웃</h2>
 
 								<div class="content">
-									<p></p>
-									<p>[samanthaV1]</p>
+									<br>
+									<p>[SamanthaV1]</p>
 									<p>NAVER CLOVA Chatbot 을<br>기반으로 만들어진</p>
 									<p>첫번째 음성인식 챗봇입니다</p>
 								</div>
@@ -100,13 +100,13 @@
 							</span>
 
 							<a href="generic.html">
-								<h2>공지사항</h2>
+								<h2>블로그</h2>
 
 								<div class="content">
-									<p></p>
+									<br>
 									<p>[특징]</p>
-									<p>samanthaV1은<br>스테이블 디퓨전을 활용하여</p>
-									<p>자신만의 얼굴을 가지고 있습니다</p>
+									<p>스테이블 디퓨전을 활용하여</p>
+									<p>자신의 얼굴을 가지고 있습니다</p>
 								</div>
 							</a>
 
@@ -122,9 +122,9 @@
 								<h2>소개</h2>
 
 								<div class="content">
-									<p></p>
+									<br>
 									<p>[핵심]</p>
-									<p>samanthaV1은<br>텍스트와 음성을 인식 후</p>
+									<p>텍스트와 음성을 인식 후</p>
 									<p>알맞게 입을 움직여야 합니다</p>
 								</div>
 							</a>
@@ -158,11 +158,24 @@
 					</section>
 
 					<section>
-						<h2>Follow</h2>
-						<ul class="icons">
-							<li><a href="https://github.com/Virtual-ChatBot" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.youtube.com/@beemil" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a></li>
-						</ul>
+
+						<div>
+							<h2>Follow</h2>
+							<ul class="icons">
+								<li><a href="https://www.youtube.com/@beemil" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a></li>
+								<li><a href="https://github.com/Virtual-ChatBot" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<h2>Project</h2>
+							<ul class="icons">
+								<li><a href="https://github.com/sososo95/motrip_main_project" target="_blank" class="icon brands style2 fa-git"><span class="label">git</span></a></li>
+							</ul>
+						</div>
 					</section>
 
 					<ul class="copyright">
