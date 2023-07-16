@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	
-		<title>BEEMILTEST1</title>
+		<title>BEEMIL</title>
 
 		<!--ICON-->
 		<link rel="icon" href="/images/phantom/logo.svg">
@@ -49,6 +49,7 @@
 						<div class="carousel-caption d-none d-md-block">
 							<h5>YOUTUBE</h5>
 							<p>구독 좋아요!</p>
+							<br>
 						</div>
 
 					</div>
