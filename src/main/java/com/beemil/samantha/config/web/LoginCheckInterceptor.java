@@ -22,21 +22,21 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 		if(request.getSession().getAttribute("result") != null) { // 로그인이 되어 있으면
 
 			System.out.println("::");
-			System.out.println("[LogonCheckInterceptor] 서비스 실행을 허가합니다.");
+			System.out.println("[LogonCheckInterceptor] 서비스 실행을 허가합니다");
 
 			return true; 	// 컨트롤러의 요청이 처리된다.
 
 		} else {			// 로그인이 되어 있지 않으면
 
 			System.out.println("::");
-			System.out.println("[LogonCheckInterceptor] 서비스 실행을 거부합니다.");
+			System.out.println("[LogonCheckInterceptor] 서비스 실행을 거부합니다");
 
 			response.setContentType("text/html; charset=UTF-8");
 
 			PrintWriter out = response.getWriter();
 
 			out.println("<script>");
-			out.println("alert('회원이 아닌 자는 접근할 수 없습니다.');");
+			out.println("alert('회원이 아닌 자는 접근할 수 없습니다');");
 			out.println("location.href='/';");
 			out.println("</script>");
 			out.close();
