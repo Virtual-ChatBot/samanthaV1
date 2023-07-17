@@ -41,7 +41,7 @@ public class UserController {
 
 		session.setAttribute("user", user);
 
-		return "main";
+		return "main.jsp";
 	}
 
 	//로그아웃 서비스
@@ -54,6 +54,6 @@ public class UserController {
 		// 로그아웃 처리 세션 초기화.
 		request.getSession().invalidate();
 
-		return "index";
+		return "index.jsp";
 	}
 }
