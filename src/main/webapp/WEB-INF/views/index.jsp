@@ -11,9 +11,10 @@
     	
 		<title>BEEMIL</title>
 
-		<!--ICON-->
-		<link rel="icon" href="/images/phantom/logo.svg">
-		<link rel="apple-touch-icon" href="/images/phantom/logo.svg">
+		<!--LOGO-->
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/phantom/logo.svg">
 	
 		<!--CSS-->
 		<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -43,18 +44,18 @@
 
 					<div class="carousel-item active" data-bs-interval="5000">
 
-						<img src="/images/login1.png" class="d-block w-100" alt="...">
+						<img src="/images/beemil/carousel1.png" class="d-block w-100" alt="...">
 
 						<div class="carousel-caption d-none d-md-block">
 							<h5>YOUTUBE</h5>
-							<p>구독 좋아요!</p>
+							<p>구독 감사합니다</p>
 							<br>
 						</div>
 
 					</div>
 
 					<div class="carousel-item" data-bs-interval="5000">
-						<img src="/images/login2.png" class="d-block w-100" alt="...">
+						<img src="/images/beemil/carousel2.png" class="d-block w-100" alt="...">
 					</div>
 
 				</div>
@@ -78,8 +79,17 @@
 	 		<div class="col-md-6 col-sm-12">
 				<div class="login-form">
 
+					<div class="form-check">
+
+						<label for="rememberId">
+							<input class="form-check-input" type="checkbox" id="rememberId">
+							아이디 저장
+						</label>
+
+					</div>
+
 					<div class="form-group">
-				 		<input type="text" class="form-control" id="userId" name="userId" placeholder="이메일">
+				 		<input type="text" class="form-control" id="userId" name="userId" placeholder="아이디">
 					</div>
 
 					<div class="form-group">
@@ -90,36 +100,14 @@
 
 					<div class="d-grid gap-2">
 
-						<button class="btn btn-dark" type="button">로그인</button>
+						<button class="btn btn-dark" type="button">관리자 로그인</button>
 
-						<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">회원가입</a>
-
-					</div>
-
-					<label class="form-label">*아무나 들어올 수 없습니다.</label>
-
-					<div class="form-check">
-
-						<label for="rememberId">
-							<input class="form-check-input" type="checkbox" id="rememberId">
-							아이디 저장
-						</label>
-
-						<!--
-						<a class="btn btn-link" role="button" onclick="">아이디 찾기</a>
-						-->
+						<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">비회원 입장</a>
 
 					</div>
 
-					<!--
-					<div class="form-group">
-					<label for="keepLogin">
-					  <input class="form-check-input" type="checkbox" name="keepLogin" id="keepLogin">
-					  로그인 유지
-					</label>
-					<a class="btn btn-link" role="button" onclick="">비밀번호 찾기</a>
-					</div>
-				  	-->
+					<label class="form-label">*누구나 입장 가능합니다</label>
+
 				</div>
 			</div>
 		</div>
