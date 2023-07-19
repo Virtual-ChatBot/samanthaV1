@@ -63,10 +63,27 @@
 				<h2>환영합니다</h2>
 
 				<ul>
-					<li><a href="../user/login?userId=${user.userId}">메인으로</a></li>
-					<li><a href="../user/logout">로그아웃</a></li>
-					<li><a href="generic.html">블로그</a></li>
-					<li><a href="generic.html">소개</a></li>
+					<li>
+						<c:if test="${sessionScope.user.nickName eq 'BEEMIL'}">
+							<a href="../user/login?userId=${user.userId}">메인으로</a>
+						</c:if>
+
+						<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
+							<a href="../visit">메인으로</a>
+						</c:if>
+					</li>
+
+					<li>
+						<a href="../user/logout">로그아웃</a>
+					</li>
+
+					<li>
+						<a href="generic.html">블로그</a>
+					</li>
+
+					<li>
+						<a href="generic.html">소개</a>
+					</li>
 				</ul>
 			</nav>
 
