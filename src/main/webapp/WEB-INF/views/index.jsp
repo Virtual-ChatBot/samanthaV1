@@ -12,16 +12,16 @@
 		<title>BEEMIL</title>
 
 		<!--LOGO-->
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/phantom/logo.svg">
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/phantom/logo.svg">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/phantom/logo.svg">
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/phantom/logo.svg">
 	
 		<!--CSS-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/phantom/index.css">
+		<link rel="stylesheet" href="../css/phantom/index.css">
 
 		<noscript>
-			<link rel="stylesheet" href="/css/phantom/noscript.css">
+			<link rel="stylesheet" href="../css/phantom/noscript.css">
 		</noscript>
 	</head>
 
@@ -44,7 +44,7 @@
 
 					<div class="carousel-item active" data-bs-interval="5000">
 
-						<img src="/images/beemil/carousel1.png" class="d-block w-100" alt="...">
+						<img src="../images/beemil/carousel1.png" class="d-block w-100" alt="...">
 
 						<div class="carousel-caption d-none d-md-block">
 							<h5>YOUTUBE</h5>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="carousel-item" data-bs-interval="5000">
-						<img src="/images/beemil/carousel2.png" class="d-block w-100" alt="...">
+						<img src="../images/beemil/carousel2.png" class="d-block w-100" alt="...">
 					</div>
 
 				</div>
@@ -102,7 +102,8 @@
 
 						<button class="btn btn-dark" type="button">관리자 로그인</button>
 
-						<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">비회원 입장</a>
+						<a class="btn btn-danger" role="button" href="../visit">비회원 입장</a>
+						<!--일부 화면만 전환 가능<a class="btn btn-danger" role="button" onclick="acyncMovePage('/user/addUser')">회원 가입</a>-->
 
 					</div>
 

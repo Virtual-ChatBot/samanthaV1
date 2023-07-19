@@ -12,16 +12,16 @@
 		<title>BEEMIL</title>
 
 		<!--LOGO-->
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/phantom/logo.svg">
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/phantom/logo.svg">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/phantom/logo.svg">
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/phantom/logo.svg">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/phantom/logo.svg">
 
 		<!--CSS-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/phantom/main.css">
+		<link rel="stylesheet" href="../css/phantom/main.css">
 
 		<noscript>
-			<link rel="stylesheet" href="/css/phantom/noscript.css">
+			<link rel="stylesheet" href="../css/phantom/noscript.css">
 		</noscript>
 	</head>
 
@@ -32,9 +32,21 @@
 				<div class="inner">
 
 					<!-- Logo -->
-					<a href="/user/login?userId=${user.userId}" class="logo">
-						<span class="symbol"><img src="/images/phantom/logo.svg" alt="" /></span><span class="title">BEEMIL</span>
-					</a>
+					<c:if test="${sessionScope.user.nickName eq 'BEEMIL'}">
+
+						<a href="../user/login?userId=${user.userId}" class="logo">
+							<span class="symbol"><img src="../images/phantom/logo.svg" alt="" /></span><span class="title">BEEMIL</span>
+						</a>
+
+					</c:if>
+
+					<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
+
+						<a href="../visit" class="logo">
+							<span class="symbol"><img src="../images/phantom/logo.svg" alt="" /></span><span class="title">BEEMIL</span>
+						</a>
+
+					</c:if>
 
 					<!-- Nav -->
 					<nav>
@@ -51,8 +63,8 @@
 				<h2>환영합니다</h2>
 
 				<ul>
-					<li><a href="/user/login?userId=${user.userId}">메인으로</a></li>
-					<li><a href="/user/logout">로그아웃</a></li>
+					<li><a href="../user/login?userId=${user.userId}">메인으로</a></li>
+					<li><a href="../user/logout">로그아웃</a></li>
 					<li><a href="generic.html">블로그</a></li>
 					<li><a href="generic.html">소개</a></li>
 				</ul>
@@ -68,8 +80,22 @@
 
 						<br>
 
-						<h2>${user.nickName}님,</h2>
-						<p>여기는 <a href="https://www.youtube.com/@beemil" target="_blank">비밀상담소</a> 가 AI 챗봇을 연구하는 곳입니다.</p>
+						<c:if test="${sessionScope.user.nickName eq 'BEEMIL'}">
+
+							<h2>${user.nickName}님,</h2>
+
+							<p>AI 챗봇 연구소에 오신 걸 환영합니다</p>
+
+						</c:if>
+
+						<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
+
+							<h2>비회원 님,</h2>
+
+							<p>여기는 <a href="https://www.youtube.com/@beemil" target="_blank">비밀상담소</a> 가 AI 챗봇을 연구하는 곳입니다.</p>
+
+						</c:if>
+
 					</header>
 
 					<section class="tiles">
@@ -77,10 +103,10 @@
 						<article class="style1">
 
 							<span class="image">
-								<img src="/images/phantom/pic01.jpg" alt="" />
+								<img src="../images/phantom/pic01.jpg" alt="" />
 							</span>
 
-							<a href="/user/logout">
+							<a href="../user/logout">
 								<h2>로그아웃</h2>
 
 								<div class="content">
@@ -96,7 +122,7 @@
 						<article class="style2">
 
 							<span class="image">
-								<img src="/images/phantom/pic02.jpg" alt="" />
+								<img src="../images/phantom/pic02.jpg" alt="" />
 							</span>
 
 							<a href="generic.html">
@@ -115,7 +141,7 @@
 						<article class="style3">
 
 							<span class="image">
-								<img src="/images/phantom/pic03.jpg" alt="" />
+								<img src="../images/phantom/pic03.jpg" alt="" />
 							</span>
 
 							<a href="generic.html">
@@ -148,7 +174,7 @@
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<video class="d-block w-100" autoplay loop>
-										<source src="/media/opening.mp4" type="video/mp4">
+										<source src="../media/opening.mp4" type="video/mp4">
 									</video>
 								</div>
 							</div>
@@ -179,7 +205,7 @@
 					</section>
 
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
 					</ul>
 
 				</div>
@@ -193,9 +219,9 @@
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 		<!-- Scripts -->
-		<script src="/js/phantom/browser.min.js"></script>
-		<script src="/js/phantom/breakpoints.min.js"></script>
-		<script src="/js/phantom/util.js"></script>
-		<script src="/js/phantom/main.js"></script>
+		<script src="../js/phantom/browser.min.js"></script>
+		<script src="../js/phantom/breakpoints.min.js"></script>
+		<script src="../js/phantom/util.js"></script>
+		<script src="../js/phantom/main.js"></script>
 	</body>
 </html>
