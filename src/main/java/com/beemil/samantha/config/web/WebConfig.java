@@ -18,7 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
 //	public void addInterceptors(InterceptorRegistry registry) {
 //		registry.addInterceptor(loginCheckInterceptor)
 //				.addPathPatterns("/**") // 모든 request URL 진입 거부
-//				.excludePathPatterns(	// 제외 대상
+//				.excludePathPatterns(	// 제외 대상 테스트
 //						"/"
 //						, "/visit"
 //						, "/css/**"
