@@ -26,12 +26,12 @@ public class UserController {
 		System.out.println("::"+getClass()+".setUserService Call.........");
 	}
 
-	// 로그인 서비스
+	// 관리자 로그인 서비스
 	@RequestMapping("login")
 	public String login(@RequestParam("userId") String userId, HttpServletRequest request ) throws Exception{
 
 		System.out.println("::");
-		System.out.println("[UserController] 로그인 서비스를 실행합니다. 환영합니다");
+		System.out.println("[UserController] 관리자 로그인 서비스를 실행합니다.");
 
 		//1) 세션을 활용하여
 		HttpSession session = request.getSession();
@@ -44,12 +44,21 @@ public class UserController {
 		return "main";
 	}
 
+	@RequestMapping("/visit")
+	public String visit() {
+
+		System.out.println("::");
+		System.out.println("[CommonController] 비회원 입장 서비스를 실행합니다.");
+
+		return "main";
+	}
+
 	//로그아웃 서비스
 	@RequestMapping("logout")
 	public String logout(HttpServletRequest request ) throws Exception{
 
 		System.out.println("::");
-		System.out.println("[UserController] 로그아웃 서비스를 실행합니다. 다음에 뵙겠습니다");
+		System.out.println("[UserController] 로그아웃 서비스를 실행합니다.");
 
 		// 로그아웃 처리 세션 초기화.
 		request.getSession().invalidate();

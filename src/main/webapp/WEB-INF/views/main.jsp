@@ -42,7 +42,7 @@
 
 					<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
 
-						<a href="../visit" class="logo">
+						<a href="../user/visit" class="logo">
 							<span class="symbol"><img src="../images/phantom/logo.svg" alt="" /></span><span class="title">BEEMIL</span>
 						</a>
 
@@ -69,7 +69,7 @@
 						</c:if>
 
 						<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
-							<a href="../visit">메인으로</a>
+							<a href="../user/visit">메인으로</a>
 						</c:if>
 					</li>
 
@@ -78,11 +78,11 @@
 					</li>
 
 					<li>
-						<a href="generic.html">블로그</a>
+						<a href="generic.html">소개</a>
 					</li>
 
 					<li>
-						<a href="generic.html">소개</a>
+						<a href="generic.html"></a>
 					</li>
 				</ul>
 			</nav>
@@ -142,8 +142,8 @@
 								<img src="../images/phantom/pic02.jpg" alt="" />
 							</span>
 
-							<a href="generic.html">
-								<h2>블로그</h2>
+							<a href="../intro">
+								<h2>소개</h2>
 
 								<div class="content">
 									<br>
@@ -162,7 +162,7 @@
 							</span>
 
 							<a href="generic.html">
-								<h2>소개</h2>
+								<h2>게시판</h2>
 
 								<div class="content">
 									<br>
@@ -227,6 +227,7 @@
 
 				</div>
 			</footer>
+
 		</div>
 
 		<!--Bootstrap-->
@@ -241,4 +242,8 @@
 		<script src="../js/phantom/util.js"></script>
 		<script src="../js/phantom/main.js"></script>
 	</body>
+
+	<div id="root"></div>
+	<script src="../js/bot.js"></script>
+	<link href="../css/bot.css" rel="stylesheet">
 </html>

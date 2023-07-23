@@ -75,7 +75,7 @@ input, select, textarea {
 /* Basic */
 
 	@-ms-viewport {
-		width: device-width;
+		width: auto;
 	}
 
 	body {
@@ -115,7 +115,7 @@ input, select, textarea {
 
 /* Type */
 
-	body, input, select, textarea {
+	header, #main, footer, select, textarea {
 		color: #585858;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
@@ -125,7 +125,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, select, textarea {
+			header, #main, footer, select, textarea {
 				font-size: 14pt;
 			}
 
@@ -133,7 +133,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, select, textarea {
+			header, #main, footer, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -2133,7 +2133,6 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 	}
 
-	input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -2155,7 +2154,6 @@ input, select, textarea {
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
@@ -2164,7 +2162,6 @@ input, select, textarea {
 			box-shadow: none;
 		}
 
-		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
@@ -2196,7 +2193,6 @@ input, select, textarea {
 			display: none;
 		}
 
-	input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -2437,7 +2433,7 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* Button */
+/* Button
 
 	input[type="submit"],
 	input[type="reset"],
