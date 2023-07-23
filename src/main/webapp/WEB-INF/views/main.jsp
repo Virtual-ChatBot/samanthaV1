@@ -78,11 +78,11 @@
 					</li>
 
 					<li>
-						<a href="generic.html">소개</a>
+						<a href="../intro">소개</a>
 					</li>
 
 					<li>
-						<a href="generic.html"></a>
+						<a href="generic.html">게시판</a>
 					</li>
 				</ul>
 			</nav>

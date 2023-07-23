@@ -36,7 +36,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 			PrintWriter out = response.getWriter();
 
 			out.println("<script>");
-			out.println("alert('회원이 아닌 자는 접근할 수 없습니다');");
+			out.println("alert('비정상적인 접근은 할 수 없습니다');");
 			out.println("location.href='/';");
 			out.println("</script>");
 			out.close();
