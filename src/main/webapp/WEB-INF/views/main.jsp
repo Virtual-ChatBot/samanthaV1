@@ -190,7 +190,7 @@
 
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<video class="d-block w-100" autoplay loop>
+									<video class="d-block w-100" loop>
 										<source src="../media/beemil/opening.mp4" type="video/mp4">
 									</video>
 								</div>
