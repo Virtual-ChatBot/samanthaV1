@@ -190,7 +190,7 @@
 
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<video class="d-block w-100" loop>
+									<video class="d-block w-100" autoplay>
 										<source src="../media/beemil/opening.mp4" type="video/mp4">
 									</video>
 								</div>
@@ -241,9 +241,11 @@
 		<script src="../js/phantom/breakpoints.min.js"></script>
 		<script src="../js/phantom/util.js"></script>
 		<script src="../js/phantom/main.js"></script>
-	</body>
 
-	<div id="root"></div>
-	<script src="../js/bot.js"></script>
-	<link href="../css/bot.css" rel="stylesheet">
+		<!-- Bot -->
+		<div id="root"></div>
+		<script src="../js/bot.js"></script>
+		<link href="../css/bot.css" rel="stylesheet">
+
+	</body>
 </html>
