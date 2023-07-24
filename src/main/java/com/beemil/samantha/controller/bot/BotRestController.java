@@ -25,9 +25,11 @@ import java.util.*;
 @RequestMapping("/bot/*")
 public class BotRestController {
 
+    ///Field
     private static final Logger logger = LoggerFactory.getLogger(BotRestController.class);
     private static Properties config;
 
+    ///Constructor
     public BotRestController() {
 
         try {
@@ -44,6 +46,7 @@ public class BotRestController {
     }
 
     // NAVER Cloud ChatBot
+    @CrossOrigin
     @RequestMapping("chat")
     public ResponseEntity<String> chatBot(@RequestBody String text) {
 
@@ -61,7 +64,6 @@ public class BotRestController {
         String encodeBase64String = makeSignature(message, secretKey);
 
         try {
-
             HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
 
             con.setDoOutput(true);
@@ -80,37 +82,41 @@ public class BotRestController {
 
             int responseCode = con.getResponseCode();
 
-            if (responseCode == 200) {    // 정상 호출
+            if (responseCode == 200) {  // 정상 호출
+
                 br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8));
+
             } else {                    // 오류 발생
+
                 logger.error("API request failed with response code: " + responseCode);
                 br = new BufferedReader(new InputStreamReader(con.getErrorStream(), StandardCharsets.UTF_8));
 
                 // 예외 처리 후 바로 반환
                 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("API request failed with response code: " + responseCode);
             }
-
             StringBuilder response = new StringBuilder();
+
             while ((decodedString = br.readLine()) != null) {
+
                 response.append(decodedString);
             }
             br.close();
 
             // 챗봇 텍스트 결과 출력
             logger.info("챗봇 응답: " + response);
-
             chatbotMessage = new JSONObject(response.toString());
+
         } catch (Exception e) {
+
             logger.error("Failed to perform chatbot request", e);
 
             // 예외 처리 후 바로 반환
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to perform chatbot request");
         }
-
         return ResponseEntity.ok(chatbotMessage.toString());
     }
-
     public static String makeSignature(String message, String secretKey) {
+
         try {
             byte[] secretKeyBytes = secretKey.getBytes(StandardCharsets.UTF_8);
 
@@ -120,11 +126,12 @@ public class BotRestController {
 
             byte[] rawHmac = mac.doFinal(message.getBytes(StandardCharsets.UTF_8));
             return Base64.getEncoder().encodeToString(rawHmac);
+
         } catch (Exception e) {
+
             throw new RuntimeException("Failed to generate signature", e);
         }
     }
-
     public static String getReqMessage(String text) {
 
         /// 최종 결과값 리턴시 사용할 변수 선언
@@ -134,9 +141,7 @@ public class BotRestController {
         String userId = UUID.randomUUID().toString();
 
         try {
-
             JSONObject obj = new JSONObject();
-
             long timestamp = new Date().getTime();
 
             System.out.println("::");
@@ -151,29 +156,34 @@ public class BotRestController {
             bubbles_obj.put("type", "text");
 
             JSONObject data_obj = new JSONObject();
-            data_obj.put("description", text);
 
+            data_obj.put("description", text);
             bubbles_obj.put("data", data_obj);
 
             JSONArray bubbles_array = new JSONArray();
-            bubbles_array.put(bubbles_obj);
 
+            bubbles_array.put(bubbles_obj);
             obj.put("bubbles", bubbles_array);
 
             if (Objects.equals(text, "동영상 보여줘")) {
+
                 obj.put("event", "open");
+
             } else {
+
                 obj.put("event", "send");
             }
             requestBody = obj.toString();
+
         } catch (Exception e) {
+
             logger.error("Failed to create the request message", e);
         }
         return requestBody;
     }
 
-
     // NAVER Cloud SpeechToText
+    @CrossOrigin
     @RequestMapping("stt")
     public StringBuffer speechToText(@RequestPart("audio")MultipartFile audioFile) throws Exception {
 
@@ -185,7 +195,6 @@ public class BotRestController {
         String clientSecret = config.getProperty("api.stt.client.secret");
 
         try {
-
             HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
 
             con.setDoOutput(true);
@@ -205,6 +214,7 @@ public class BotRestController {
             int bytesRead = -1;
 
             while ((bytesRead = inputStream.read(buffer)) != -1) {
+
                 outputStream.write(buffer, 0, bytesRead);
             }
 
@@ -218,7 +228,7 @@ public class BotRestController {
 
             int responseCode = con.getResponseCode();
 
-            if(responseCode == 200) {	// 정상 호출
+            if(responseCode == 200) {   // 정상 호출
 
                 br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8));
 
@@ -227,28 +237,25 @@ public class BotRestController {
                 System.out.println("error!!!!!!! responseCode= " + responseCode);
                 br = new BufferedReader(new InputStreamReader(con.getErrorStream(), StandardCharsets.UTF_8));
             }
-
             while ((inputLine = br.readLine()) != null) {
 
                 response.append(inputLine);
             }
-
             br.close();
 
             // 음성변환 텍스트 결과 출력
             System.out.println("::");
             logger.info("음성 변환 결과: " + response);
 
-
         }	catch (Exception e) {
 
             logger.error("Failed to perform speech-to-text conversion", e);
         }
-
         return response;
     }
 
     // NAVER Cloud TextToSpeech
+    @CrossOrigin
     @RequestMapping("tts")
     public static ResponseEntity<byte[]> textToSpeech(@RequestBody String tts) throws Exception {
 
@@ -261,7 +268,6 @@ public class BotRestController {
         String postParams = "speaker=ngoeun&volume=0&speed=0&pitch=0&format=mp3&text=" + text;
 
         try {
-
             HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
 
             con.setDoOutput(true);
@@ -277,6 +283,7 @@ public class BotRestController {
             wr.close();
 
             int responseCode = con.getResponseCode();
+
             BufferedReader br;
             String date = Long.valueOf(new Date().getTime()).toString();
 
@@ -296,7 +303,6 @@ public class BotRestController {
                 is.close();
 
                 byte[] byteData = bos.toByteArray();
-
                 HttpHeaders headers = new HttpHeaders();
 
                 headers.setContentType(MediaType.parseMediaType("audio/mpeg"));
@@ -313,9 +319,7 @@ public class BotRestController {
             } else {  // 오류 발생
 
                 br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
-
                 String inputLine;
-
                 StringBuilder response = new StringBuilder();
 
                 while ((inputLine = br.readLine()) != null) {
@@ -335,13 +339,17 @@ public class BotRestController {
     }
 
     // 페이지 내비게이션 서비스
+    @CrossOrigin
     @RequestMapping("navi")
     public ResponseEntity<Map<String, String[]>> pageNavigation(@RequestBody(required = false) Map<String, String[]> data, HttpServletRequest request) throws Exception {
-        if (data != null && data.containsKey("url")) {
-            String[] urls = data.get("url");
-            if (urls != null && urls.length > 0) {
-                String[] responseData = new String[]{urls[0]};
 
+        if (data != null && data.containsKey("url")) {
+
+            String[] urls = data.get("url");
+
+            if (urls != null && urls.length > 0) {
+
+                String[] responseData = new String[]{urls[0]};
                 return ResponseEntity.ok().body(Collections.singletonMap("url", responseData));
             }
         }
