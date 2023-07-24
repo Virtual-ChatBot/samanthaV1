@@ -124,13 +124,11 @@
 							</span>
 
 							<a href="../user/logout">
-								<h2>로그아웃</h2>
+								<h2>&nbsp;로그아웃</h2>
 
 								<div class="content">
 									<br>
-									<p>[SamanthaV1]</p>
-									<p>NAVER CLOVA Chatbot 을<br>기반으로 만들어진</p>
-									<p>첫번째 음성인식 챗봇입니다</p>
+									<p>방문해 주셔서<br>감사합니다</p>
 								</div>
 							</a>
 
@@ -143,13 +141,12 @@
 							</span>
 
 							<a href="../intro">
-								<h2>소개</h2>
+								<h2>&nbsp;소개</h2>
 
 								<div class="content">
 									<br>
-									<p>[특징]</p>
-									<p>스테이블 디퓨전을 활용하여</p>
-									<p>자신의 얼굴을 가지고 있습니다</p>
+									<p>NAVER CLOVA Chatbot 을<br>기반으로 만들어진</p>
+									<p>첫번째 음성인식 챗봇입니다</p>
 								</div>
 							</a>
 
@@ -162,13 +159,12 @@
 							</span>
 
 							<a href="generic.html">
-								<h2>게시판</h2>
+								<h2>&nbsp;게시판</h2>
 
 								<div class="content">
 									<br>
-									<p>[핵심]</p>
-									<p>텍스트와 음성을 인식 후</p>
-									<p>알맞게 입을 움직여야 합니다</p>
+									<p>스테이블 디퓨전을 활용하여<br>
+									자신만의 얼굴을 가지고 있습니다</p>
 								</div>
 							</a>
 

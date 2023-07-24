@@ -94,7 +94,7 @@
 						<div class="inner">
 
 							<a href="../intro" class="logo">
-								<h1>사만다 V1</h1>
+								<h1>SAMANTHA</h1>
 							</a>
 
 							<br>
