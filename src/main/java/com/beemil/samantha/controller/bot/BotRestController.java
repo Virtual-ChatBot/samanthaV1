@@ -4,9 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -254,90 +251,6 @@ public class BotRestController {
         return response;
     }
 
-    // NAVER Cloud TextToSpeech
-    @CrossOrigin
-    @RequestMapping("tts")
-    public static ResponseEntity<byte[]> textToSpeech(@RequestBody String tts) throws Exception {
-
-        String apiUrl = config.getProperty("api.tts.url");
-        String clientId = config.getProperty("api.tts.client.id");
-        String clientSecret = config.getProperty("api.tts.client.secret");
-
-        // 챗봇 응답 텍스트 Request
-        String text = URLEncoder.encode(tts, "UTF-8");
-        String postParams = "speaker=ngoeun&volume=0&speed=0&pitch=0&format=mp3&text=" + text;
-
-        try {
-            HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
-
-            con.setDoOutput(true);
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clientId);
-            con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
-
-            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-
-            wr.writeBytes(postParams);
-            wr.flush();
-            wr.close();
-
-            int responseCode = con.getResponseCode();
-
-            BufferedReader br;
-            String date = Long.valueOf(new Date().getTime()).toString();
-
-            if(responseCode==200) { // 정상 호출
-
-                InputStream is = con.getInputStream();
-
-                int read = 0;
-                byte[] bytes = new byte[1024];
-
-                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-
-                while ((read =is.read(bytes)) != -1) {
-
-                    bos.write(bytes, 0, read);
-                }
-                is.close();
-
-                byte[] byteData = bos.toByteArray();
-                HttpHeaders headers = new HttpHeaders();
-
-                headers.setContentType(MediaType.parseMediaType("audio/mpeg"));
-                headers.setContentLength(byteData.length);
-                headers.setContentDispositionFormData("attachment", date + ".mp3");
-
-                ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(byteData, headers, HttpStatus.OK);
-
-                System.out.println("::");
-                System.out.println("챗봇음성: " + response);
-
-                return response;
-
-            } else {  // 오류 발생
-
-                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
-                String inputLine;
-                StringBuilder response = new StringBuilder();
-
-                while ((inputLine = br.readLine()) != null) {
-
-                    response.append(inputLine);
-                }
-
-                br.close();
-                System.out.println(response.toString());
-            }
-
-        } catch (Exception e) {
-
-            System.out.println(e);
-        }
-        return null;
-    }
-
     // 페이지 내비게이션 서비스
     @CrossOrigin
     @RequestMapping("navi")
@@ -355,4 +268,89 @@ public class BotRestController {
         }
         return ResponseEntity.badRequest().build();
     }
+
+// NAVER Cloud TextToSpeech(요금 이슈로 현재 사용 안 함)
+//
+//    @CrossOrigin
+//    @RequestMapping("tts")
+//    public static ResponseEntity<byte[]> textToSpeech(@RequestBody String tts) throws Exception {
+//
+//        String apiUrl = config.getProperty("api.tts.url");
+//        String clientId = config.getProperty("api.tts.client.id");
+//        String clientSecret = config.getProperty("api.tts.client.secret");
+//
+//        // 챗봇 응답 텍스트 Request
+//        String text = URLEncoder.encode(tts, "UTF-8");
+//        String postParams = "speaker=ngoeun&volume=0&speed=0&pitch=0&format=mp3&text=" + text;
+//
+//        try {
+//            HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
+//
+//            con.setDoOutput(true);
+//            con.setRequestMethod("POST");
+//            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+//            con.setRequestProperty("X-NCP-APIGW-API-KEY-ID", clientId);
+//            con.setRequestProperty("X-NCP-APIGW-API-KEY", clientSecret);
+//
+//            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+//
+//            wr.writeBytes(postParams);
+//            wr.flush();
+//            wr.close();
+//
+//            int responseCode = con.getResponseCode();
+//
+//            BufferedReader br;
+//            String date = Long.valueOf(new Date().getTime()).toString();
+//
+//            if(responseCode==200) { // 정상 호출
+//
+//                InputStream is = con.getInputStream();
+//
+//                int read = 0;
+//                byte[] bytes = new byte[1024];
+//
+//                ByteArrayOutputStream bos = new ByteArrayOutputStream();
+//
+//                while ((read =is.read(bytes)) != -1) {
+//
+//                    bos.write(bytes, 0, read);
+//                }
+//                is.close();
+//
+//                byte[] byteData = bos.toByteArray();
+//                HttpHeaders headers = new HttpHeaders();
+//
+//                headers.setContentType(MediaType.parseMediaType("audio/mpeg"));
+//                headers.setContentLength(byteData.length);
+//                headers.setContentDispositionFormData("attachment", date + ".mp3");
+//
+//                ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(byteData, headers, HttpStatus.OK);
+//
+//                System.out.println("::");
+//                System.out.println("챗봇음성: " + response);
+//
+//                return response;
+//
+//            } else {  // 오류 발생
+//
+//                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+//                String inputLine;
+//                StringBuilder response = new StringBuilder();
+//
+//                while ((inputLine = br.readLine()) != null) {
+//
+//                    response.append(inputLine);
+//                }
+//
+//                br.close();
+//                System.out.println(response.toString());
+//            }
+//
+//        } catch (Exception e) {
+//
+//            System.out.println(e);
+//        }
+//        return null;
+//    }
 }
