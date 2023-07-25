@@ -15,6 +15,15 @@ public class CommonController {
         return "index";
     }
 
+    @RequestMapping("visit")
+    public String visit() {
+
+        System.out.println("::");
+        System.out.println("[CommonController] 비회원 입장 서비스를 실행합니다.");
+
+        return "main";
+    }
+
     @RequestMapping("/intro")
     public String intro() {
 

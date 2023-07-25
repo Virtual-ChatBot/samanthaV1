@@ -49,7 +49,6 @@ public class UserRestController {
 			System.out.println("::");
 			System.out.println("[UserRestController] 아이디 확인이 완료되었습니다. 패스워드 확인을 시작합니다.");
 
-			//해시코드 암호화 기능 준비중 if(Encoder.matches(pwd, vo.getPassword()))
 			if(user.getPassword().equals(password)){
 
 				result="YESPWD";
@@ -61,7 +60,7 @@ public class UserRestController {
 				session.setMaxInactiveInterval(600); // 1800 = 60s*10 (10분)
 
 				//3) LogonCheckInterceptor에 세션을 전달하여 외부 유입 차단.
-				session.setAttribute("result", result);
+				session.setAttribute("userId", user.getUserId());
 
 				System.out.println("::");
 				System.out.println("[UserRestController] 패스워드 확인이 완료되었습니다. 접속을 허가합니다.");

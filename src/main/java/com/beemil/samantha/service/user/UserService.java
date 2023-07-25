@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
 	///Field
-	private UserDao userDao;
+	private final UserDao userDao;
 
 	///Constructor
 	@Autowired
