@@ -103,10 +103,10 @@
 
 							</header>
 
+							<p>음성인식 챗봇에 관한 이야기입니다</p>
 							<span class="image main"><img src="images/beemil/her.png" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p><b>1. 음성인식 챗봇 구축을 위한 가상화 네트워크를 구축하였습니다.</b></p>
+							<p>클라우드 서비스 이용 시 고정으로 지출되는 비용을 줄이기 위해 호스트 OS 가상화를 이용하였습니다. 공유기를 이용해 공인IP와 사설IP를 구분하여 외부 통신이 가능하면서도 보안성을 높일 수 있었습니다. WOL 및 스마트 플러그를 이용해 원격 서버 기동 및 접속을 구현하여 어디서든 개발이 가능하도록 구현 하였습니다.</p>
 						</div>
 					</div>
 

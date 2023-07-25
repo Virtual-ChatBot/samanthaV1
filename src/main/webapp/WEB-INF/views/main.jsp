@@ -99,7 +99,7 @@
 
 						<c:if test="${sessionScope.user.nickName eq 'BEEMIL'}">
 
-							<h2>${user.nickName}님,</h2>
+						<p><b>${user.nickName}</b> 님,</p>
 
 							<p>AI 챗봇 연구소에 오신 걸 환영합니다</p>
 
@@ -107,7 +107,7 @@
 
 						<c:if test="${sessionScope.user.nickName ne 'BEEMIL'}">
 
-							<h2>비회원 님,</h2>
+							<p><b>비 회 원</b> 님,</p>
 
 							<p>여기는 <a href="https://www.youtube.com/@beemil" target="_blank">비밀상담소</a> 가 AI 챗봇을 연구하는 곳입니다.</p>
 
@@ -145,8 +145,8 @@
 
 								<div class="content">
 									<br>
-									<p>NAVER CLOVA Chatbot 을<br>기반으로 만들어진</p>
-									<p>첫번째 음성인식 챗봇입니다</p>
+									<p>NAVER CLOVA Chatbot 을<br>기반으로 만들어진
+									<br>첫번째 음성인식 챗봇입니다</p>
 								</div>
 							</a>
 
