@@ -30,6 +30,7 @@ public class BotRestController {
     public BotRestController() {
 
         try {
+
             String filePath = Objects.requireNonNull(getClass().getClassLoader().getResource("application.properties")).getFile();
             FileInputStream fis = new FileInputStream(filePath);
             config = new Properties();
