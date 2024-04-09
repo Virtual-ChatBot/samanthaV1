@@ -1,4 +1,4 @@
-package com.beemil.samantha.config.db;
+package site.beemil.samantha.config.db;
 
 import javax.sql.DataSource;
 
@@ -33,13 +33,12 @@ public class DatabaseConfig {
 		sessionFactory.setDataSource(dataSource);
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		//sessionFactory.setMapperLocations(resolver.getResources("mapper/*.xml")); 		//mapper 파일 로드
-		sessionFactory.setConfigLocation(resolver.getResource("static/mapper/mybatis-config.xml"));//mybatis-config 로드
+		sessionFactory.setConfigLocation(resolver.getResource("mapper/mybatis-config.xml"));//mybatis-config 로드
 		return sessionFactory.getObject();
 	}
 
 	@Bean
 	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception{
-		final SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-		return sqlSessionTemplate;
+        return new SqlSessionTemplate(sqlSessionFactory);
 	}
 }

@@ -1,7 +1,7 @@
-package com.beemil.samantha.controller.user;
+package site.beemil.samantha.controller.user;
 
-import com.beemil.samantha.domain.User;
-import com.beemil.samantha.service.user.UserService;
+import site.beemil.samantha.vo.UserVO;
+import site.beemil.samantha.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +37,7 @@ public class UserController {
 		HttpSession session = request.getSession();
 
 		//2) 로그인한 회원 정보를 main.jsp 로 전달
-		User user = userService.login(userId);
+		UserVO user = userService.login(userId);
 
 		session.setAttribute("user", user);
 

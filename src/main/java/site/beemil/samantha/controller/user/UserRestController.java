@@ -1,7 +1,7 @@
-package com.beemil.samantha.controller.user;
+package site.beemil.samantha.controller.user;
 
-import com.beemil.samantha.domain.User;
-import com.beemil.samantha.service.user.UserService;
+import site.beemil.samantha.vo.UserVO;
+import site.beemil.samantha.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +33,7 @@ public class UserRestController {
 
 		String result="";
 
-		User user = userService.login(userId);
+		UserVO user = userService.login(userId);
 
 		if(user == null ) {
 

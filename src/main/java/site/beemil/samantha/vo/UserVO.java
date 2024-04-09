@@ -1,7 +1,7 @@
-package com.beemil.samantha.domain;
+package site.beemil.samantha.vo;
 import java.sql.Date;
 
-public class User {
+public class UserVO {
 
 	///Field
 	private String userId;

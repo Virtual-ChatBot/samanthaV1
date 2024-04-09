@@ -1,4 +1,4 @@
-package com.beemil.samantha;
+package site.beemil.samantha;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
