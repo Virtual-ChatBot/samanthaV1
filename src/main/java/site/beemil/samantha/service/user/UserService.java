@@ -6,7 +6,6 @@ import site.beemil.samantha.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//==> 회원관리 서비스 구현
 @Service
 public class UserService {
 
