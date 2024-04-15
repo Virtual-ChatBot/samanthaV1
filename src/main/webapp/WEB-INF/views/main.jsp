@@ -199,6 +199,7 @@
 						<div>
 							<h2>Follow</h2>
 							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/beemil" target="_blank" class="icon brands style2 fa-linkedin"><span class="label">GitHub</span></a></li>
 								<li><a href="https://github.com/Virtual-ChatBot" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="https://www.youtube.com/@beemil" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a></li>
 							</ul>
@@ -211,7 +212,6 @@
 							<h2>Project</h2>
 							<ul class="icons">
 								<li><a href="https://github.com/Virtual-ChatBot/samanthaV1" target="_blank" class="icon brands style2 fa-git"><span class="label">git</span></a></li>
-								<li><a href="https://github.com/sososo95/motrip_main_project" target="_blank" class="icon brands style2 fa-git"><span class="label">git</span></a></li>
 							</ul>
 						</div>
 					</section>
