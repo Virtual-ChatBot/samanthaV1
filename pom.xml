@@ -81,6 +81,21 @@
 			<version>20210307</version>
 		</dependency>
 
+		<!-- SSH 터널링 접속 라이브러리 시작 -->
+		<dependency>
+			<groupId>com.github.mwiede</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- SSH 터널링 접속 라이브러리 끝-->
+
 	</dependencies>
 
 	<build>
