@@ -27,14 +27,14 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 		if (userId != null) { // 로그인이 되어 있으면
 
 			System.out.println("::");
-			System.out.println("[LoginCheckInterceptor] 서비스 실행을 허가합니다");
+			System.out.println("::[LoginCheckInterceptor] 서비스 실행을 허가합니다");
 
 			return true; 	// 컨트롤러의 요청이 처리된다.
 
 		} else {			// 로그인이 되어 있지 않으면
 
 			System.out.println("::");
-			System.out.println("[LoginCheckInterceptor] 서비스 실행을 거부합니다");
+			System.out.println("::[LoginCheckInterceptor] 서비스 실행을 거부합니다");
 
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

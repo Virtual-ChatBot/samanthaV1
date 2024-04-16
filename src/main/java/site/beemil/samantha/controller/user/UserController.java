@@ -31,7 +31,7 @@ public class UserController {
 	public String login(@RequestParam("userId") String userId, HttpServletRequest request ) throws Exception{
 
 		System.out.println("::");
-		System.out.println("[UserController] 관리자 로그인 서비스를 실행합니다.");
+		System.out.println("::[UserController] 관리자 로그인 서비스를 실행합니다.");
 
 		//1) 세션을 활용하여
 		HttpSession session = request.getSession();
@@ -49,7 +49,7 @@ public class UserController {
 	public String logout(HttpServletRequest request ) throws Exception{
 
 		System.out.println("::");
-		System.out.println("[UserController] 로그아웃 서비스를 실행합니다.");
+		System.out.println("::[UserController] 로그아웃 서비스를 실행합니다.");
 
 		// 로그아웃 처리 세션 초기화.
 		request.getSession().invalidate();

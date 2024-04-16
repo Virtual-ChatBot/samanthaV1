@@ -29,7 +29,7 @@ public class UserRestController {
 	public String loginCk(String userId, String password, HttpServletRequest request) throws Exception {
 
 		System.out.println("::");
-		System.out.println("[UserRestController] 계정 유무 확인 서비스를 시작합니다.");
+		System.out.println("::[UserRestController] 계정 유무 확인 서비스를 시작합니다.");
 
 		String result="";
 
@@ -40,14 +40,14 @@ public class UserRestController {
 			result="NOID";
 
 			System.out.println("::");
-			System.out.println("[UserRestController] 아이디가 없습니다. 접속을 거부합니다.");
+			System.out.println("::[UserRestController] 아이디가 없습니다. 접속을 거부합니다.");
 
 		} else {
 
 			result="YESID";
 
 			System.out.println("::");
-			System.out.println("[UserRestController] 아이디 확인이 완료되었습니다. 패스워드 확인을 시작합니다.");
+			System.out.println("::[UserRestController] 아이디 확인이 완료되었습니다. 패스워드 확인을 시작합니다.");
 
 			if(user.getPassword().equals(password)){
 
@@ -63,14 +63,14 @@ public class UserRestController {
 				session.setAttribute("userId", user.getUserId());
 
 				System.out.println("::");
-				System.out.println("[UserRestController] 패스워드 확인이 완료되었습니다. 접속을 허가합니다.");
+				System.out.println("::[UserRestController] 패스워드 확인이 완료되었습니다. 접속을 허가합니다.");
 
 			} else {
 
 				result="NOPWD";
 
 				System.out.println("::");
-				System.out.println("[UserRestController] 패스워드가 틀렸습니다. 접속을 거부합니다.");
+				System.out.println("::[UserRestController] 패스워드가 틀렸습니다. 접속을 거부합니다.");
 			}
 		}
 		return result;

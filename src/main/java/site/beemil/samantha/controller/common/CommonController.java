@@ -10,7 +10,7 @@ public class CommonController {
     public String index() {
 
         System.out.println("::");
-        System.out.println("[CommonController] 비밀연구소에 오신 걸 환영합니다.");
+        System.out.println("::[CommonController] 비밀연구소에 오신 걸 환영합니다.");
 
         return "index";
     }
@@ -19,7 +19,7 @@ public class CommonController {
     public String visit() {
 
         System.out.println("::");
-        System.out.println("[CommonController] 비회원 입장 서비스를 실행합니다.");
+        System.out.println("::[CommonController] 비회원 입장 서비스를 실행합니다.");
 
         return "main";
     }
@@ -28,7 +28,7 @@ public class CommonController {
     public String intro() {
 
         System.out.println("::");
-        System.out.println("[CommonController] 소개 서비스를 실행합니다.");
+        System.out.println("::[CommonController] 소개 서비스를 실행합니다.");
 
         return "intro";
     }
