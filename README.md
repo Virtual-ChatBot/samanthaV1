@@ -8,6 +8,7 @@
 * Naver cloud service is paid and a security key is used.
 * application.properties is controlled through the Jenkins library.
 * So you won't find application.properties in my repository.
+
 <img src="./app.png" alt="Streaming App" width="200"/>
 
 ## ⭐ Still want to try it? ⭐
