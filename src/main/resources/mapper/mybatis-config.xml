@@ -14,7 +14,7 @@
 
 	<!-- FQCN(Full Qualified Class Name) Alias -->
 	<typeAliases>
-		<typeAlias alias="user" type="site.beemil.samanthaV1.vo.UserVO" />
+		<typeAlias alias="userVO" type="site.beemil.samanthaV1.vo.UserVO" />
 	</typeAliases>
 
 	<!-- SQL Definition :: file include -->
