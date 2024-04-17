@@ -1,4 +1,4 @@
-package site.beemil.samanthaV1.service.user;
+package site.beemil.samanthaV1.service;
 
 
 import site.beemil.samanthaV1.dao.UserDAO;

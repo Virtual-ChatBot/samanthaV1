@@ -1,7 +1,7 @@
 package site.beemil.samanthaV1.controller.user;
 
 import site.beemil.samanthaV1.vo.UserVO;
-import site.beemil.samanthaV1.service.user.UserService;
+import site.beemil.samanthaV1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
