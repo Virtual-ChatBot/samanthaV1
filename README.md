@@ -4,10 +4,15 @@
 * Samantha answers by text and voice.
 * Samantha moves the look.
 
+## Specifications
+* Platform: Java 11
+* Project Type: Maven
+
 ## You cannot use this source alone:
 * Naver cloud service is paid and a security key is used.
 * application.properties is controlled through the Jenkins library.
 * So you won't find application.properties in my repository.
+* Please create the application.properties file at src/main/resources'.
 
 <img src="./app.png" alt="Streaming App" width="200"/>
 
