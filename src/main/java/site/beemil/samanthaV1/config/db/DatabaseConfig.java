@@ -1,12 +1,10 @@
-package site.beemil.samantha.config.db;
+package site.beemil.samanthaV1.config.db;
 
 import javax.sql.DataSource;
 
-import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,13 +12,16 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import site.beemil.samantha.util.SshTunnelingUtil;
+import site.beemil.samanthaV1.util.SshTunnelingUtil;
 
 @Configuration
-@RequiredArgsConstructor
 public class DatabaseConfig {
 
 	private final SshTunnelingUtil sshTunnelingUtil;
+
+	public DatabaseConfig(SshTunnelingUtil sshTunnelingUtil) {
+		this.sshTunnelingUtil = sshTunnelingUtil;
+	}
 
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource.hikari")

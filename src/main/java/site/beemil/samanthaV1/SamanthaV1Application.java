@@ -1,4 +1,4 @@
-package site.beemil.samantha;
+package site.beemil.samanthaV1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-package site.beemil.samantha.service.user;
+package site.beemil.samanthaV1.service.user;
 
 
-import site.beemil.samantha.dao.UserDAO;
-import site.beemil.samantha.vo.UserVO;
+import site.beemil.samanthaV1.dao.UserDAO;
+import site.beemil.samanthaV1.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

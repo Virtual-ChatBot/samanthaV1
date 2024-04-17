@@ -1,4 +1,4 @@
-package site.beemil.samantha.vo;
+package site.beemil.samanthaV1.vo;
 import java.sql.Date;
 
 public class UserVO {

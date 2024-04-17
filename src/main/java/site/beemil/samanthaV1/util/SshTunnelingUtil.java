@@ -1,4 +1,4 @@
-package site.beemil.samantha.util;
+package site.beemil.samanthaV1.util;
 
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;

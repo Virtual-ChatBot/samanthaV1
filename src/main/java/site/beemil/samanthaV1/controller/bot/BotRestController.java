@@ -1,4 +1,4 @@
-package site.beemil.samantha.controller.bot;
+package site.beemil.samanthaV1.controller.bot;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,7 +1,7 @@
-package site.beemil.samantha.dao;
+package site.beemil.samanthaV1.dao;
 
 
-import site.beemil.samantha.vo.UserVO;
+import site.beemil.samanthaV1.vo.UserVO;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

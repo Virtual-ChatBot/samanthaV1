@@ -1,4 +1,4 @@
-package site.beemil.samantha.controller.common;
+package site.beemil.samanthaV1.controller.common;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

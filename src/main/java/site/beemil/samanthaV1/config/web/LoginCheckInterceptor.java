@@ -1,4 +1,4 @@
-package site.beemil.samantha.config.web;
+package site.beemil.samanthaV1.config.web;
 
 
 import org.springframework.stereotype.Component;

@@ -11,14 +11,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.beemil</groupId>
+	<groupId>site.beemil</groupId>
 	<artifactId>samanthaV1</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>samanthaV1</name>
 
-	<description>virtual chatBot platform project</description>
+	<description>chatbot platform maven project</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -30,13 +30,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.5.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<version>2.5.3</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -78,7 +71,7 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20210307</version>
+			<version>20231013</version>
 		</dependency>
 
 		<!-- SSH 터널링 접속 라이브러리 시작 -->
