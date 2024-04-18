@@ -5,7 +5,7 @@
 * Samantha moves the look.
 
 ## Specifications
-* Platform: Java 11
+* OpenJDK: temurin-11.0.22
 * Project Type: Maven
 * Framework: Spring Boot
 * Database: PostgreSQL
