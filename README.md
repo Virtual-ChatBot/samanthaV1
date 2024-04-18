@@ -5,9 +5,9 @@
 * Samantha moves the look.
 
 ## Specifications
+* Project Type: Maven
 * OpenJDK: Temurin-11.0.22
 * Server: Tomcat 9.0.54
-* Project Type: Maven
 * Framework: Spring Boot
 * Database: PostgreSQL
 
