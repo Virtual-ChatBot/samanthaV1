@@ -10,6 +10,7 @@
 * Server: Tomcat 9.0.54
 * Framework: Spring Boot
 * Database: PostgreSQL
+* CI/CD: Jenkins
 
 ## You cannot use this source alone:
 * Naver cloud service is paid and a security key is used.
