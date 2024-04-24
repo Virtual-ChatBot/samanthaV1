@@ -3,6 +3,7 @@
 * Voice recognition is possible through the microphone.
 * Samantha answers by text and voice.
 * Samantha moves the look.
+* There will be no more updates for this.
 
 ## Specifications
 * Project Type: Maven
